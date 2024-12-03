@@ -23,17 +23,6 @@ function handleRequest($requestUri) {
 
     // 构建原始 URL
     $originalUrl = $baseUrl . '?' . http_build_query($queryParams);
-
-    // 生成签名
-    $time = time();
-    $key = 1;
-    $sign = base64_encode(hash_hmac("SHA256", "GET\n$originalUrl\n$time\n", $key, true));
-    $ke = md5($sign);
-    $ke1 = md5($ke);
-    $ke2 = base64_encode($ke1);
-
-    // 设置响应头
-    header("Signkey: $ke2");
     
     // 使用 CURL 发送请求并获取响应
     $ch = curl_init();
