@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Origin: *");
 
 // 获取当前的日期，格式为 yyyy-MM-dd
 function getCurrentDateInShanghaiTimezone() {
