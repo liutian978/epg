@@ -9,8 +9,8 @@ function getCurrentDateInShanghaiTimezone() {
 
 function handleRequest($requestUri) {
     // 基础 URL
-    $baseUrl = 'https://51.112114.xyz/';
-    //$baseUrl = 'https://epg.112114.eu.org/';
+    //$baseUrl = 'https://51.112114.xyz/';
+    $baseUrl = 'https://epg.112114.eu.org/';
     
     // 从查询参数中获取 "ch" 的值，默认为 "CCTV9"
     parse_str(parse_url($requestUri, PHP_URL_QUERY), $queryParams);
